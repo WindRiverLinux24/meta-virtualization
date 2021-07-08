@@ -75,3 +75,6 @@ RDEPENDS:${PN}-ptest:remove = "${PN}"
 CVE_PRODUCT = "docker_registry"
 
 COMPATIBLE_HOST:riscv64 = "null"
+
+ALLOW_EMPTY:${PN} = "1"
+ALLOW_EMPTY:${PN}-dev = "1"
