@@ -24,6 +24,7 @@ RDEPENDS:${PN} = " \
 SRC_URI = " \
     git://github.com/containers/skopeo;branch=release-1.14;protocol=https;destsuffix=git/src/github.com/containers/skopeo \
     file://0001-makefile-add-GOBUILDFLAGS-to-go-build-call.patch \
+    file://0001-fix-sigstore-verify-failed.patch \
 "
 
 SRCREV = "1c2ab995059dd011aad74e2c37305d636ebd2675"
