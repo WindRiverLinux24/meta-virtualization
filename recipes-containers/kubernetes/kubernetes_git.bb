@@ -92,6 +92,7 @@ do_compile() {
 	export CC="${CC}"
 	export LD="${LD}"
 	export GOBIN=""
+	export GOFLAGS="-trimpath"
 
 	# to limit what is built, use 'WHAT', i.e. make WHAT=cmd/kubelet
 	make cross CGO_FLAGS=${CGO_FLAGS} GO=${GO} KUBE_BUILD_PLATFORMS=${GOOS}/${GOARCH} GOLDFLAGS="" DBG=1
@@ -125,7 +126,7 @@ PACKAGES =+ "kubeadm kubectl kubelet kube-proxy ${PN}-misc ${PN}-host"
 ALLOW_EMPTY:${PN} = "1"
 INSANE_SKIP:${PN} += "ldflags already-stripped"
 INSANE_SKIP:${PN}-misc += "ldflags already-stripped textrel"
-INSANE_SKIP:kubelet += "ldflags already-stripped"
+INSANE_SKIP:${MLPREFIX}kubelet += "ldflags already-stripped textrel"
 
 # Note: we are explicitly *not* adding docker to the rdepends, since we allow
 #       backends like cri-o to be used.
