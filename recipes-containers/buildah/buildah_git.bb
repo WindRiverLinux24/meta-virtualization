@@ -33,6 +33,12 @@ SRCREV_storage = "246ba3062e8b551026aef2708eee747014ce5c52"
 
 SRC_URI = " \
     git://github.com/containers/buildah;branch=release-1.34;name=buildah;protocol=https \
+    file://CVE-2024-3727-0001.patch;patchdir=src/github.com/containers/buildah/vendor/github.com/containers/image/v5 \
+    file://CVE-2024-3727-0002.patch;patchdir=src/github.com/containers/buildah \
+    file://CVE-2024-3727-0003.patch;patchdir=src/github.com/containers/buildah/vendor/github.com/containers/image/v5 \
+    file://CVE-2024-3727-0004.patch;patchdir=src/github.com/containers/buildah/vendor/github.com/containers/image/v5 \
+    file://CVE-2024-3727-0005.patch;patchdir=src/github.com/containers/buildah/vendor/github.com/containers/image/v5 \
+    file://CVE-2024-3727-0006.patch;patchdir=src/github.com/containers/buildah/vendor/github.com/containers/image/v5 \
     "
 
 DEPENDS = "libdevmapper btrfs-tools gpgme"
