@@ -18,6 +18,8 @@ SRCREV_cri-o = "5aff11c7c1afdc785adafd7da3c3f2a6ac51b88d"
 SRC_URI = "\
 	git://github.com/kubernetes-sigs/cri-o.git;branch=release-1.30;name=cri-o;protocol=https \
         file://crio.conf \
+        file://CVE-2024-5154-0001.patch;patchdir=src/import \
+        file://CVE-2024-5154-0002.patch;patchdir=src/import \
 	"
 
 # Apache-2.0 for docker
