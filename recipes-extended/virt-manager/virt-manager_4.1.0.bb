@@ -6,7 +6,7 @@ DEPENDS += "python3-docutils-native"
 SRCREV = "6710ca6969b7d9c4e8344acd0fe3d50b24adc8ec"
 
 SRC_URI = " \
-  git://github.com/virt-manager/virt-manager;branch=main;protocol=https \
+  git://github.com/virt-manager/virt-manager.git;branch=main;protocol=https \
   file://0001-setup.py-move-global-args-to-install-args.patch \
 "
 
