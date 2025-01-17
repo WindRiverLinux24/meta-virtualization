@@ -22,6 +22,7 @@ SRCREV = "946d055df324e4ed6c1e806b561af4740db4fea9"
 SRC_URI = " \
     git://github.com/containers/podman.git;branch=v5.0;protocol=https \
     file://0001-fix-sigstore-verify-failed.patch \
+    file://0001-Use-securejoin.SecureJoin-when-forming-userns-paths.patch;patchdir=src/import/vendor/github.com/containers/storage \
 "
 
 LICENSE = "Apache-2.0"
