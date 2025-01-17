@@ -39,6 +39,7 @@ SRC_URI = " \
     file://CVE-2024-3727-0004.patch;patchdir=src/github.com/containers/buildah/vendor/github.com/containers/image/v5 \
     file://CVE-2024-3727-0005.patch;patchdir=src/github.com/containers/buildah/vendor/github.com/containers/image/v5 \
     file://CVE-2024-3727-0006.patch;patchdir=src/github.com/containers/buildah/vendor/github.com/containers/image/v5 \
+    file://0001-Use-securejoin.SecureJoin-when-forming-userns-paths.patch;patchdir=src/github.com/containers/buildah/vendor/github.com/containers/storage \
     "
 
 DEPENDS = "libdevmapper btrfs-tools gpgme"
