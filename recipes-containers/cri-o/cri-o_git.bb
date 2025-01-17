@@ -14,12 +14,10 @@ At a high level, we expect the scope of cri-o to be restricted to the following 
  - Resource isolation as required by the CRI \
  "
 
-SRCREV_cri-o = "5aff11c7c1afdc785adafd7da3c3f2a6ac51b88d"
+SRCREV_cri-o = "359f960f46697517f048e6ff3caf728ae75cb384"
 SRC_URI = "\
 	git://github.com/kubernetes-sigs/cri-o.git;branch=release-1.30;name=cri-o;protocol=https \
         file://crio.conf \
-        file://CVE-2024-5154-0001.patch;patchdir=src/import \
-        file://CVE-2024-5154-0002.patch;patchdir=src/import \
 	"
 
 # Apache-2.0 for docker
@@ -28,7 +26,7 @@ LIC_FILES_CHKSUM = "file://src/import/LICENSE;md5=e3fc50a88d0a364313df4b21ef20c2
 
 GO_IMPORT = "import"
 
-PV = "1.30.0+git${SRCREV_cri-o}"
+PV = "1.30.8+git${SRCREV_cri-o}"
 
 inherit features_check
 REQUIRED_DISTRO_FEATURES ?= "seccomp"
