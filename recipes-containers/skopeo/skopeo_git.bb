@@ -61,7 +61,7 @@ do_compile() {
 	export CGO_LDFLAGS="${TARGET_LDFLAGS}"
 
 	export GO111MODULE=off
-	export GOBUILDFLAGS="-trimpath"
+	export GOBUILDFLAGS="-trimpath -buildmode=pie"
 	export EXTRA_LDFLAGS="-s -w"
 
 	oe_runmake bin/skopeo
